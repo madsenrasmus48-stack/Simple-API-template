@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using System.Text;
 using Simple_API_template;
+using Simple_API_template.Dataservices;
 
 namespace Simple_API_template.Repositories;
 
-public class SampleClassRepository
+public class SampleClassRepository : ISampleClassRepository
 {
     public SampleClassRepository()
     {
