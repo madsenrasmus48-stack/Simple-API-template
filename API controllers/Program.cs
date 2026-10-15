@@ -1,3 +1,8 @@
+
+
+using Simple_API_template.Dataservices;
+using Simple_API_template.Repositories;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -5,6 +10,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
+builder.Services.AddSingleton<ISampleClassRepository, SampleClassRepository>();
 
 var app = builder.Build();
 
