@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="API controllers/API controllers.csproj" />
+  <Project Path="Simple API template/Simple API template.csproj" />
+</Solution>
