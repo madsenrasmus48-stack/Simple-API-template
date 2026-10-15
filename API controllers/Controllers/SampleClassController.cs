@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Simple_API_template;
 using Simple_API_template.Dataservices;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -18,9 +19,9 @@ namespace API_controllers.Controllers
 
         // GET: api/<SampleClassController>
         [HttpGet]
-        public IEnumerable<string> Get()
+        public IEnumerable<SampleClass> Get()
         {
-            return new string[] { "value1", "value2" };
+            return Repository.Data;
         }
 
         // GET api/<SampleClassController>/5
