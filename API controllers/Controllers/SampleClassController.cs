@@ -21,32 +21,35 @@ namespace API_controllers.Controllers
         [HttpGet]
         public IEnumerable<SampleClass> Get()
         {
-            return Repository.Data;
+            return Repository.GetAll();
         }
 
         // GET api/<SampleClassController>/5
         [HttpGet("{id}")]
-        public string Get(int id)
+        public SampleClass Get(int id)
         {
-            return "value";
+                return Repository.GetById(id);
         }
 
         // POST api/<SampleClassController>
         [HttpPost]
-        public void Post([FromBody] string value)
+        public SampleClass Post([FromBody] string name, [FromBody] int age)
         {
+            return Repository.Create(name, age);
         }
 
         // PUT api/<SampleClassController>/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        public SampleClass Put(int id, [FromBody] string name, [FromBody] int age)
         {
+            return Repository.Update(id,name, age);
         }
 
         // DELETE api/<SampleClassController>/5
         [HttpDelete("{id}")]
-        public void Delete(int id)
+        public SampleClass Delete(int id)
         {
+            return Repository.Delete(id);
         }
     }
 }
