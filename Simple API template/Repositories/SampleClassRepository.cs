@@ -7,6 +7,8 @@ using Simple_API_template.Dataservices;
 
 namespace Simple_API_template.Repositories;
 
+
+
 public class SampleClassRepository : ISampleClassRepository
 {
     private static int _nextid;
