@@ -57,7 +57,8 @@ public class SampleClassRepository : ISampleClassRepository
     {
         SampleClass oldObject = GetById(id);
         SampleClass newObject = new SampleClass(id, name, age);
-        Data[id - 1] = newObject;
+        Data.Remove(oldObject);
+        Data.Add(newObject);
         return newObject;
     }
 
