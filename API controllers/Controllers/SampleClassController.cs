@@ -33,14 +33,15 @@ namespace API_controllers.Controllers
 
         // POST api/<SampleClassController>
         [HttpPost]
-        public SampleClass Post([FromBody] string name, [FromBody] int age)
+        public SampleClass Post([FromBody] SampleClassDTO sampleClassDTO)
         {
-            return Repository.Create(name, age);
+
+            return Repository.Create(sampleClassDTO.Name, sampleClassDTO.Age);
         }
 
         // PUT api/<SampleClassController>/5
         [HttpPut("{id}")]
-        public SampleClass Put(int id, [FromBody] string name, [FromBody] int age)
+        public SampleClass Put(int id, [FromBody] string name,int age)
         {
             return Repository.Update(id,name, age);
         }
